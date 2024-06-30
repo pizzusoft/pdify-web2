@@ -1,21 +1,24 @@
 {
-    "homepage": "https://pizzusoft.github.io/pdify-web2/",
+    "homepage": "https://pizzusoft.github.io/pdify-web/",
     "name": "pdify",
     "private": true,
     "version": "1.0.0",
     "type": "module",
     "scripts": {
         "prebuild": "npm run build",
-        "deploy": "gh-pages -d dist",
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
+        "clean": "rm -rf dist"
     },
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.24.0",
-        "react-router-hash-link": "^2.4.3"
+        "react-router-hash-link": "^2.4.3",
+        "yarn": "^1.22.22"
     },
     "devDependencies": {
         "@types/react": "^18.2.74",

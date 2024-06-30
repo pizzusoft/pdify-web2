@@ -1,83 +1,143 @@
 import {
-  FastBolt,
-  ToolIcon,
-  SecureShield,
-  GithubIcon,
-  FacebookIcon,
-  LinkedInIcon,
+    FastBolt,
+    ToolIcon,
+    SecureShield,
+    GithubIcon,
+    FacebookIcon,
+    LinkedInIcon,
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "home",
-    title: "Home",
-  },
-  {
-    id: "features",
-    title: "Features",
-  },
-  {
-    id: "download",
-    title: "Download",
-  },
+    {
+        id: "home",
+        title: "Home",
+    },
+    {
+        id: "features",
+        title: "Features",
+    },
+    {
+        id: "download",
+        title: "Download",
+    },
 ];
 
 export const features = [
-  {
-    id: "feature-1",
-    icon: FastBolt,
-    title: "Fast PDF Build",
-    content:
-      "PDIFY found the fastest way to create PDFs from online images. You just add images and export a PDF within a minute.",
-  },
-  {
-    id: "feature-2",
-    icon: SecureShield,
-    title: "Secure",
-    content:
-      "You don't need to upload images to create PDFs online; PDIFY never collects or stores any user data.",
-  },
-  {
-    id: "feature-3",
-    icon: ToolIcon,
-    title: "Annotation Tools",
-    content:
-      "The PDIFY Built-in Editor enables users to add comments, highlights, drawings, shapes, images and new pages. It also allows for easy updates and enhancements to image collections before exporting the PDF.",
-  },
+    {
+        id: "feature-1",
+        icon: FastBolt,
+        title: "Fast PDF Build",
+        content:
+            "PDIFY found the fastest way to create PDFs from online images. You just add images and export a PDF within a minute.",
+    },
+    {
+        id: "feature-2",
+        icon: SecureShield,
+        title: "Secure",
+        content:
+            "You don't need to upload images to create PDFs online; PDIFY never collects or stores any user data.",
+    },
+    {
+        id: "feature-3",
+        icon: ToolIcon,
+        title: "Annotation Tools",
+        content:
+            "The PDIFY Built-in Editor enables users to add comments, highlights, drawings, shapes, images and new pages. It also allows for easy updates and enhancements to image collections before exporting the PDF.",
+    },
 ];
 
 export const footerLinks = [
-  {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Report a bug",
-        link: "https://github.com/pizzusoft/pdify/issues",
-      },
-      {
-        name: "Github Pizzusoft",
-        link: "https://github.com/pizzusoft/pdify/",
-      },
-    ],
-  },
+    {
+        title: "Useful Links",
+        links: [
+            {
+                name: "Report a bug",
+                link: "https://github.com/pizzusoft/pdify/issues",
+            },
+            {
+                name: "Github Pizzusoft",
+                link: "https://github.com/pizzusoft/pdify/",
+            },
+        ],
+    },
 ];
 
 export const socialMedia = [
-  {
-    id: "github",
-    icon: GithubIcon,
-    link: "https://github.com/pizzusoft/pdify/",
-  },
-  {
-    id: "social-media-2",
-    icon: FacebookIcon,
-    link: "https://www.facebook.com/shariar.kabir.27",
-  },
-  {
-    id: "social-media-4",
-    icon: LinkedInIcon,
-    link: "https://www.linkedin.com/in/md-shariar-kabir/",
-  },
+    {
+        id: "github",
+        icon: GithubIcon,
+        link: "https://github.com/pizzusoft/pdify/",
+    },
+    {
+        id: "social-media-2",
+        icon: FacebookIcon,
+        link: "https://www.facebook.com/shariar.kabir.27",
+    },
+    {
+        id: "social-media-4",
+        icon: LinkedInIcon,
+        link: "https://www.linkedin.com/in/md-shariar-kabir/",
+    },
+];
+
+// Privacy and Security
+export const privacyAndSecurity = [
+    {
+        heading: `Information Collection and Use`,
+        subHeading: `The Extension is designed to convert images to PDF format. In order to provide this functionality, the Extension may:
+        Access images from your local browser or web pages as instructed by you.
+        Temporarily process these images to convert them into PDF files.
+        We do not collect, store, or transmit any personal information or images beyond what is necessary to provide the conversion functionality. All processing is done locally on your browser.
+        `,
+        points: [],
+    },
+    {
+        heading: `Data Storage`,
+        subHeading: ``,
+        points: [
+            {
+                title: `Local Processing:`,
+                des: `All image processing and PDF conversion occur locally on your browser. No image data is transmitted to our servers or any third-party servers.`,
+            },
+            {
+                title: `Temporary Data: `,
+                des: `Any data used for the conversion process is temporarily held in your browser’s memory and is discarded immediately after the conversion is complete.`,
+            },
+        ],
+    },
+    {
+        heading: `Data Sharing`,
+        subHeading: `We do not share your data with third parties. Since all processing happens locally on your browser, no image data is uploaded, stored, or shared externally.`,
+        points: [],
+    },
+    {
+        heading: `Security Measures`,
+        subHeading: `We implement the following security measures to protect your information:`,
+        points: [
+            {
+                title: `Local Processing:`,
+                des: `By ensuring all data processing occurs locally, we eliminate the risk of data interception or unauthorized access during transmission.`,
+            },
+            {
+                title: `No Persistent Storage:`,
+                des: `We do not store any images or converted PDF files after the conversion process is complete.`,
+            },
+            {
+                title: `Permissions:`,
+                des: `The Extension only requests the necessary permissions to access images as instructed by you for the sole purpose of conversion.`,
+            },
+        ],
+    },
+    {
+        heading: `User Control`,
+        subHeading: `You have full control over the images you choose to convert using the Extension. The Extension will only access images you explicitly select and approve for conversion.`,
+        points: [],
+    },
+    {
+        heading: `Changes to This Policy`,
+        subHeading: `We may update our Privacy and Security Policy from time to time. We will notify you of any changes by posting the new Policy on this page. You are advised to review this Policy periodically for any changes.`,
+        points: [],
+    },
 ];
 
 /*

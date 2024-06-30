@@ -1,11 +1,10 @@
 import styles from "./style";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import React, { Suspense } from "react";
 import LoadingSunpense from "./components/LoadingSunpense";
 
 // lazzy loading
-// import NavWrapper from "./components/Wrapper/NavWrapper";
 const NavWrapper = React.lazy(() => import("./components/Wrapper/NavWrapper"));
 const Hero = React.lazy(() => import("./components/Hero"));
 const Features = React.lazy(() => import("./components/Features"));
@@ -41,7 +40,6 @@ const App = () => {
                                         {/* status of extension */}
                                         <Features />
                                         <Download />
-                                        <Footer />
                                     </div>
                                 </div>
                             </div>
@@ -52,6 +50,11 @@ const App = () => {
                         element={<PrivacyAndSecurity />}
                     ></Route>
                 </Routes>
+                <div
+                    className={`bg-primary dark:bg-slate-800 ${styles.flexStart}`}
+                >
+                    <Footer />
+                </div>
             </Suspense>
         </div>
     );
