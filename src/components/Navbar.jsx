@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Outlet, Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import { Logo, menu, close } from "../assets";
-import { navLinks } from "../constants";
+import { navLinks } from "./../constants";
 
 const Navbar = () => {
     const [active, setActive] = useState("Home");
@@ -11,14 +13,18 @@ const Navbar = () => {
         <nav className='w-full flex py-4 justify-between items-center navbar'>
             <div className='flex justify-center items-center gap-4'>
                 <img src={Logo} alt='hoobank' className='xw-[124px] h-[32px]' />
-                <span className='text-slate-700 dark:text-dimWhite text-4xl font-extrabold'>
+                <Link
+                    to='/'
+                    className='text-slate-700 dark:text-dimWhite text-4xl font-extrabold'
+                >
                     PDIFY
-                </span>
+                </Link>
             </div>
 
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
                 {navLinks.map((nav, index) => (
-                    <li
+                    <HashLink
+                        to={`/#${nav.id}`}
                         key={nav.id}
                         className={`font-poppins font-normal cursor-pointer text-[16px] ${
                             active === nav.title
@@ -27,9 +33,15 @@ const Navbar = () => {
                         } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                         onClick={() => setActive(nav.title)}
                     >
-                        <a href={`#${nav.id}`}>{nav.title}</a>
-                    </li>
+                        {nav.title}
+                    </HashLink>
                 ))}
+                <Link
+                    to='/privacy'
+                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ml-10`}
+                >
+                    Privacy
+                </Link>
             </ul>
 
             <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -47,7 +59,7 @@ const Navbar = () => {
                 >
                     <ul className='list-none flex justify-end items-start flex-1 flex-col'>
                         {navLinks.map((nav, index) => (
-                            <li
+                            <HashLink
                                 key={nav.id}
                                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
                                     active === nav.title
@@ -59,30 +71,21 @@ const Navbar = () => {
                                         : "mb-4"
                                 }`}
                                 onClick={() => setActive(nav.title)}
+                                to={`#${nav.id}`}
                             >
-                                <a href={`#${nav.id}`}>{nav.title}</a>
-                            </li>
+                                {nav.title}
+                            </HashLink>
                         ))}
-                        {/* <li
-                            className={`font-poppins font-normal cursor-pointer text-[16px] text-dimWhite mt-2`}
-                            onClick={() => setIsDark((prev) => !prev)}
-                            title={`${isDark ? `Dark` : `Light`}`}
+                        <Link
+                            to='/privacy'
+                            className={`font-poppins font-normal cursor-pointer text-[16px] text-dimWhite mt-4`}
                         >
-                            {isDark ? (
-                                <div className='flex justify-between items-center gap-2'>
-                                    <NightIcon cssClass={"fill-white"} />{" "}
-                                    {`Dark`}
-                                </div>
-                            ) : (
-                                <div className='flex justify-start items-center gap-2 text-yellow-500'>
-                                    <LightIcon cssClass={"fill-yellow-500"} />
-                                    {`Light`}
-                                </div>
-                            )}
-                        </li> */}
+                            Privacy
+                        </Link>
                     </ul>
                 </div>
             </div>
+            <Outlet />
         </nav>
     );
 };
