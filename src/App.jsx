@@ -22,7 +22,7 @@ const App = () => {
                 <Routes>
                     <Route
                         exact
-                        path='/'
+                        path='/pdify-web/'
                         element={
                             <div>
                                 <div
@@ -46,7 +46,7 @@ const App = () => {
                         }
                     ></Route>
                     <Route
-                        path='/privacy'
+                        path='/pdify-web/privacy'
                         element={<PrivacyAndSecurity />}
                     ></Route>
                 </Routes>

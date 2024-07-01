@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className='flex justify-center items-center gap-4'>
                 <img src={Logo} alt='hoobank' className='xw-[124px] h-[32px]' />
                 <Link
-                    to='/'
+                    to='/pdify-web/'
                     className='text-slate-700 dark:text-dimWhite text-4xl font-extrabold'
                 >
                     PDIFY
@@ -24,7 +24,7 @@ const Navbar = () => {
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
                 {navLinks.map((nav, index) => (
                     <HashLink
-                        to={`/#${nav.id}`}
+                        to={`/pdify-web/#${nav.id}`}
                         key={nav.id}
                         className={`font-poppins font-normal cursor-pointer text-[16px] ${
                             active === nav.title
@@ -37,7 +37,7 @@ const Navbar = () => {
                     </HashLink>
                 ))}
                 <Link
-                    to='/privacy'
+                    to='/pdify-web/privacy'
                     className={`font-poppins font-normal cursor-pointer text-[16px] text-white ml-10`}
                 >
                     Privacy
@@ -71,13 +71,13 @@ const Navbar = () => {
                                         : "mb-4"
                                 }`}
                                 onClick={() => setActive(nav.title)}
-                                to={`#${nav.id}`}
+                                to={`/pdify-web/#${nav.id}`}
                             >
                                 {nav.title}
                             </HashLink>
                         ))}
                         <Link
-                            to='/privacy'
+                            to='/pdify-web/privacy'
                             className={`font-poppins font-normal cursor-pointer text-[16px] text-dimWhite mt-4`}
                         >
                             Privacy

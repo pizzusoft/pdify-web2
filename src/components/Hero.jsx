@@ -46,7 +46,11 @@ const Hero = () => {
                 </div>
 
                 <div className='flex justify-center items-center gap-4 px-8 xpy-1 bg-slate-700 rounded-full'>
-                    <img src='/icon.png' className='h-[45px]' alt='icon' />
+                    <img
+                        src='./icon.png'
+                        className='h-[30px] sm:h-[45px]'
+                        alt='icon'
+                    />
                     <h1 className='xtext-gradient-logo font-poppins font-[700] ss:text-[48px] text-[32px] text-gray-600 dark:text-white  w-full'>
                         PDIFY
                     </h1>
