@@ -49,7 +49,9 @@ const App = () => {
                         path='/pdify-web/privacy'
                         element={<PrivacyAndSecurity />}
                     ></Route>
+                    <Route path='*'></Route>
                 </Routes>
+
                 <div
                     className={`bg-primary dark:bg-slate-800 ${styles.flexStart}`}
                 >
