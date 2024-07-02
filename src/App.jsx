@@ -21,8 +21,7 @@ const App = () => {
                 <NavWrapper />
                 <Routes>
                     <Route
-                        exact
-                        path='/pdify-web/'
+                        path='/'
                         element={
                             <div>
                                 <div
@@ -46,7 +45,7 @@ const App = () => {
                         }
                     ></Route>
                     <Route
-                        path='/pdify-web/privacy'
+                        path='/privacy'
                         element={<PrivacyAndSecurity />}
                     ></Route>
                     <Route path='*'></Route>

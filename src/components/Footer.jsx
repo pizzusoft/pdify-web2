@@ -62,7 +62,10 @@ const Footer = () => (
 
             <div className='flex flex-row gap-4 md:mt-0 mt-6'>
                 {socialMedia.map((social, index) => (
-                    <div className='p-4 hover:bg-slate-500 rounded-full'>
+                    <div
+                        key={index}
+                        className='p-4 hover:bg-slate-500 rounded-full'
+                    >
                         <img
                             src={social.icon}
                             alt={social.id}
