@@ -68,11 +68,11 @@ export const socialMedia = [
         icon: GithubIcon,
         link: "https://github.com/pizzusoft/pdify/",
     },
-    {
-        id: "social-media-2",
-        icon: FacebookIcon,
-        link: "https://www.facebook.com/shariar.kabir.27",
-    },
+    // {
+    //     id: "social-media-2",
+    //     icon: FacebookIcon,
+    //     link: "https://www.facebook.com/shariar.kabir.27",
+    // },
     {
         id: "social-media-4",
         icon: LinkedInIcon,
