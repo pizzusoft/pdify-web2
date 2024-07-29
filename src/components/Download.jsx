@@ -26,7 +26,10 @@ const Download = () => (
             </p>
 
             <div className='flex flex-col sm:flex-row flex-wrap sm:mt-10 mt-6 gap-6'>
-                <a href='https://chromewebstore.google.com/' target='_blank'>
+                <a
+                    href='https://chromewebstore.google.com/detail/pdify/jefldaehieliinjhjfjbkgongiljnpji'
+                    target='_blank'
+                >
                     <img
                         src={ChromeWebStore}
                         alt='google_play'
