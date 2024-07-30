@@ -14,7 +14,6 @@ const PrivacyAndSecurity = React.lazy(() =>
     import("./components/PrivacyAndSecurity")
 );
 const Footer = React.lazy(() => import("./components/Footer"));
-
 const App = () => {
     return (
         <div className='dark bg-primary dark:bg-slate-800 text-gray-600 dark:text-white w-full overflow-hidden  select-none'>
