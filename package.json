@@ -1,8 +1,10 @@
 {
-    "name": "https://pizzusoft.github.io/web-test/",
+    "name": "pdify",
+    "homepage": "https://pizzusoft.github.io/pdify-web/",
     "private": true,
     "version": "1.0.1",
     "type": "module",
+    "author": "Md. Shariar Kabir",
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",

@@ -1,5 +1,5 @@
 import styles from "./style";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import React, { Suspense } from "react";
 import LoadingSunpense from "./components/LoadingSunpense";
@@ -48,9 +48,11 @@ const App = () => {
                         path='/privacy'
                         element={<PrivacyAndSecurity />}
                     ></Route>
-                    <Route path='*'></Route>
+                    <Route
+                        path='*'
+                        element={<Navigate to='/' replace />}
+                    ></Route>
                 </Routes>
-
                 <div
                     className={`bg-primary dark:bg-slate-800 ${styles.flexStart}`}
                 >
