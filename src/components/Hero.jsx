@@ -1,9 +1,42 @@
+import React, { useEffect, useRef, useLayoutEffect } from "react";
 import styles from "../style";
 import { HeroBanner } from "../assets";
+import gsap from "gsap";
 
 const Hero = () => {
+    const comp = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            const t1 = gsap.timeline();
+            const t2 = gsap.timeline();
+            t1.fromTo(
+                "#hero-image",
+                { scale: "0", duration: 1 },
+                { scale: "1", duration: 1 }
+            );
+            t2.fromTo(
+                "#hero-text",
+                { x: "-10%", opacity: 0 },
+                { x: "0%", opacity: 1, duration: 0.5 }
+            )
+                .fromTo(
+                    "#hero-text-2",
+                    { x: "-5%", opacity: 0 },
+                    { x: "0%", opacity: 1, duration: 1 }
+                )
+                .fromTo(
+                    "#hero-text-3",
+                    { x: "-5%", opacity: 0 },
+                    { x: "0%", opacity: 1 }
+                );
+        }, comp);
+
+        return () => ctx.revert();
+    }, []);
     return (
         <section
+            ref={comp}
             id='home'
             className={`flex md:flex-row flex-col ${styles.paddingY} pt-[5rem] sm:pt-[3rem]`}
         >
@@ -28,7 +61,10 @@ const Hero = () => {
                     </p>
                 </div> */}
 
-                <div className='flex flex-row justify-between items-center w-full'>
+                <div
+                    className='flex flex-row justify-between items-center w-full'
+                    id='hero-text'
+                >
                     <h1 className='flex flex-col font-poppins font-semibold ss:text-[32px] text-[52px] text-gray-600 dark:text-white ss:leading-[70.8px] leading-[60px]'>
                         <span className='sm:text-[62px] text-[40px] '>
                             We Build
@@ -45,7 +81,10 @@ const Hero = () => {
           </div> */}
                 </div>
 
-                <div className='flex justify-center items-center gap-4 px-8 xpy-1 bg-slate-700 rounded-full'>
+                <div
+                    className='flex justify-center items-center gap-4 px-8 xpy-1 bg-slate-700 rounded-full'
+                    id='hero-text-2'
+                >
                     <img
                         src='./icon.png'
                         className='h-[30px] sm:h-[45px]'
@@ -57,6 +96,7 @@ const Hero = () => {
                 </div>
                 <p
                     className={`${styles.paragraph} max-w-[470px] mt-5 text-current`}
+                    id='hero-text-3'
                 >
                     PDIFY isa cross-browser extension where you can make a pdf
                     from images or edit it in your browser from website images
@@ -71,6 +111,7 @@ const Hero = () => {
                     src={HeroBanner}
                     alt='billing'
                     className='xw-[40%] xh-[100%] relative z-[5]'
+                    id='hero-image'
                 />
 
                 {/* gradient start */}

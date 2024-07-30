@@ -1,5 +1,6 @@
 import styles from "./style";
 import { Routes, Route, Navigate } from "react-router-dom";
+import gsap from "gsap";
 
 import React, { Suspense } from "react";
 import LoadingSunpense from "./components/LoadingSunpense";
