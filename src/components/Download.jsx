@@ -37,7 +37,7 @@ const Download = () => (
                     />
                 </a>
                 <a
-                    href='https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home/'
+                    href='https://microsoftedge.microsoft.com/addons/detail/pdify-image-to-pdf-edi/adppiipkibhjnjjgahmeffimjaidlebn'
                     target='_blank'
                 >
                     <img
