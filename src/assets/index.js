@@ -13,20 +13,22 @@ import FacebookIcon from "./facebook.svg";
 import LinkedInIcon from "./linkedin.svg";
 import close from "./close.svg";
 import menu from "./menu.svg";
+import Youtube from "./youtube.svg";
 
 export {
-  Logo,
-  FastBolt,
-  SecureShield,
-  ToolIcon,
-  GithubIcon,
-  HeroBanner,
-  FeatureBanner,
-  DownloadBanner,
-  ChromeWebStore,
-  EdgeAddOns,
-  FacebookIcon,
-  LinkedInIcon,
-  close,
-  menu,
+    Logo,
+    FastBolt,
+    SecureShield,
+    ToolIcon,
+    GithubIcon,
+    HeroBanner,
+    FeatureBanner,
+    DownloadBanner,
+    ChromeWebStore,
+    EdgeAddOns,
+    FacebookIcon,
+    LinkedInIcon,
+    close,
+    menu,
+    Youtube,
 };

@@ -5,6 +5,7 @@ import {
     GithubIcon,
     FacebookIcon,
     LinkedInIcon,
+    Youtube,
 } from "../assets";
 
 export const navLinks = [
@@ -77,6 +78,11 @@ export const socialMedia = [
         id: "social-media-4",
         icon: LinkedInIcon,
         link: "https://www.linkedin.com/in/md-shariar-kabir/",
+    },
+    {
+        id: "youtube",
+        icon: Youtube,
+        link: "https://youtu.be/UnWEhw6iVDo",
     },
 ];
 
